@@ -27,13 +27,13 @@ jobs:
       - run: yarn ng test --single-run --no-progress
       - run:
           command: |
-            docker build -t simonaco.azurecr.io/angular-cli-nginx:1.0 .
+            docker build -t awesomeapp.azurecr.io/angular-cli-nginx:1.0 .
       - run:
           command: |
             docker login --username $DOCKER_USER --password $DOCKER_PASS simonaco.azurecr.io
       - run:
           command: |
-            docker push simonaco.azurecr.io/angular-cli-nginx:1.0
+            docker push awesomeapp.azurecr.io/angular-cli-nginx:1.0
 
 
 
