@@ -34,6 +34,9 @@ jobs:
       - run:
           command: |
             docker push awesomeapp.azurecr.io/angular-cli-nginx:1.0
+      - notify:
+          webhooks:
+            - url: https://sicotin-hue.azurewebsites.net/api/BuildFinished
 
 
 
